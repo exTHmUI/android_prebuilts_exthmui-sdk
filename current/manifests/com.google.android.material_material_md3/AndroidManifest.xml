@@ -15,33 +15,12 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.google.android.material" >
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="31" />
+        android:targetSdkVersion="32" />
 
-    <permission
-        android:name="com.google.android.material.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-        android:protectionLevel="signature" />
-
-    <uses-permission android:name="com.google.android.material.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-
-    <application android:appComponentFactory="androidx.core.app.CoreComponentFactory" >
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.google.android.material.androidx-startup"
-	    android:exported="false"
-	    tools:replace="android:authorities"
-            tools:node="merge" >
-            <meta-data
-                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-                android:value="androidx.startup" />
-            <meta-data
-                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-                android:value="androidx.startup" />
-        </provider>
-    </application>
+    <application />
 
 </manifest>
